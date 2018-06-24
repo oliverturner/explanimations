@@ -2,3 +2,5 @@
 
 A series of interactive animations designed to help students learn how various 
 programming patterns work
+
+Next up: filter and reduce!
