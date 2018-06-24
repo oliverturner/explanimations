@@ -1,9 +1,6 @@
 @keyframes drop-in {
-  from {
-    transform: translateY(-90px);
-  }
   to {
-    transform: translateY(0);
+    transform: translateX(0) translateY(0);
   }
 }
 
@@ -96,8 +93,6 @@ body {
   }
 
   &::before {
-    transition: transform 1s;
-
     content: "";
     position: absolute;
     left: 0;
