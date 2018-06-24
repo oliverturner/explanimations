@@ -1,0 +1,15 @@
+{
+  "name": "explanimations",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "index.js",
+  "devDependencies": {
+    "postcss": "6.0.23",
+    "postcss-cli": "5.0.1",
+    "postcss-preset-env": "5.1.0"
+  },
+  "scripts": {
+    "postcss": "postcss -o assets/styles.css src/*.pcss",
+    "start": "yarn run postcss -w"
+  }
+}
