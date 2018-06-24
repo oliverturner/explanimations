@@ -79,13 +79,12 @@ function Explanimation(els) {
 }
 
 (function() {
-  const els = {
+  new Explanimation({
     cb: document.querySelector("#callback"),
     source: document.querySelector("#source"),
     dest: document.querySelector("#dest"),
     playBtn: document.querySelector("#play-btn"),
     resetBtn: document.querySelector("#reset-btn"),
     nums: document.querySelectorAll("#fn b")
-  };
-  new Explanimation(els);
+  });
 })();
