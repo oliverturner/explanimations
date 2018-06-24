@@ -26,8 +26,7 @@ const getResult = n => n * n;
 
 const updateFn = (numbers, msg) => numbers.forEach(el => (el.textContent = msg));
 
-(function() {
-  const total = 7;
+function Explanimation(total) {
   const numbers = makeNumbers(total);
 
   const els = {
@@ -83,4 +82,8 @@ const updateFn = (numbers, msg) => numbers.forEach(el => (el.textContent = msg))
   els.resetBtn.addEventListener("click", e => {
     reset()
   });
+}
+
+(function() {
+  new Explanimation(7)
 })();
