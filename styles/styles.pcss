@@ -4,12 +4,6 @@
   }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 :root {
   --item-gap: 10px;
   --item-wh: 50px;
@@ -17,11 +11,6 @@
 
   --border-w: 5px;
   --offset: calc(var(--border-w) * -1);
-}
-
-body {
-  margin: 0;
-  font-family: serif;
 }
 
 .row {
@@ -32,11 +21,18 @@ body {
   margin-top: 20px;
 }
 
+.app {
+  display: grid;
+  grid-template-rows: 1fr auto;
+
+  height: 100vh;
+}
+
 .diagram {
   display: grid;
   place-content: center;
 
-  height: 100vh;
+  font-family: serif;
 }
 
 .array {
@@ -154,7 +150,7 @@ body {
 }
 
 .mono {
-  width: 430px;
+  width: 100%;
   padding: 10px;
   font-family: monospace;
   font-size: 20px;
@@ -170,5 +166,39 @@ body {
 
   & b {
     font-weight: 400;
+  }
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px;
+  border-top: 1px dotted currentColor;
+  font-family: var(--font-base);
+}
+
+.control__btn {
+  margin: 0 5px;
+  background: #fff;
+  color: #222;
+}
+
+.toc {
+  display: flex;
+  justify-content: center;
+
+  padding: 5px;
+  background: #222;
+  color: #ccc;
+
+  & .btn {
+    margin: 0 5px;
+
+    &:target {
+      background: #ccc;
+      color: #222;
+    }
   }
 }

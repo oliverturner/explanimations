@@ -9,7 +9,7 @@
     "postcss-preset-env": "5.1.0"
   },
   "scripts": {
-    "postcss": "postcss -o assets/styles.css src/*.pcss",
+    "postcss": "postcss --ext css -d assets styles/*.pcss",
     "start": "yarn run postcss -w"
   }
 }
