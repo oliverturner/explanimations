@@ -5,37 +5,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Explanimations</title>
+  <title>Explanimations: Array.protoype.map</title>
+  <link rel="stylesheet" href="/assets/reset.css">
   <link rel="stylesheet" href="/assets/styles.css">
 </head>
 
 <body>
-  <div class="diagram">
-    <p class="mono" id="fn">const <i>fn</i> = <b>num</b> => <b>num</b> * <b>num</b></p>
-    <div class="row">
-      <ol class="array array--source" id="source">
-        <li class="item"><span></span></li>
-        <li class="item"><span></span></li>
-        <li class="item"><span></span></li>
-        <li class="item"><span></span></li>
-        <li class="item"><span></span></li>
-        <li class="item"><span></span></li>
-        <li class="item"><span></span></li>
-      </ol>
-      <div class="map">.map</div>
-      <div class="callback" id="callback">fn</div>
+  <div class="app">
+    <div class="diagram">
+      <p class="mono" id="fn">const
+        <i>fn</i> =
+
+        <b>num</b> =>
+        <b>num</b> *
+        <b>num</b>
+      </p>
+      <div class="row">
+        <ol class="array array--source" id="source">
+          <li class="item">
+            <span></span>
+          </li>
+          <li class="item">
+            <span></span>
+          </li>
+          <li class="item">
+            <span></span>
+          </li>
+          <li class="item">
+            <span></span>
+          </li>
+          <li class="item">
+            <span></span>
+          </li>
+          <li class="item">
+            <span></span>
+          </li>
+          <li class="item">
+            <span></span>
+          </li>
+        </ol>
+        <div class="method">.map</div>
+        <div class="callback" id="callback">fn</div>
+      </div>
+      <div class="row">
+        <ol class="array array--dest" id="dest"></ol>
+      </div>
+      <div class="row controls">
+        <button class="btn control__btn" id="play-btn">play</button>
+        <button class="btn control__btn" id="pause-btn">pause</button>
+        <button class="btn control__btn" id="reset-btn">reset</button>
+      </div>
     </div>
-    <div class="row">
-      <ol class="array array--dest" id="dest"></ol>
-    </div>
-    <div class="row">
-      <button id="play-btn">play</button>
-      <button id="reset-btn">reset</button>
-    </div>
+    <nav class="toc">
+      <a class="btn toc__link" href="/">map</a>
+      <a class="btn toc__link" href="/filter.html" class="toc__link">filter</a>
+    </nav>
   </div>
   <script src="/assets/tween-lite.min.js"></script>
   <script src="/assets/timeline-lite.min.js"></script>
   <script src="/assets/css-plugin.min.js"></script>
-  <script src="/src/map.js"></script>
+  <script type="module">
+    import { Explanimation } from "./src/explanimation.js"
+    import * as method from "./src/map.js"
+    new Explanimation(method);
+  </script>
 </body>
+
 </html>
